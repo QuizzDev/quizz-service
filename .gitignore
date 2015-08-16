@@ -1,0 +1,40 @@
+#symfony specific
+/app/cache/*
+/app/logs/*
+/app/bootstrap.php.cache
+/app/DoctrineMigrations/
+/web/bundles/
+.bin
+/bin/
+/vendor/
+/web/css/
+/web/media/
+/web/js/
+/web/images/
+
+
+#configs
+/app/config/parameters.yml
+
+# generic files to ignore
+# backup files (*~) and vim swap file (.swp), MacOS dir file (.DS_Store)
+*~
+*.lock
+*.DS_Store
+.*.swp
+*.out
+
+# IDE files to ignore (Netbeans, Eclipse, Phpstorm)
+nbproject/private/
+.classpath
+.buildpath
+.project
+.settings
+.idea
+
+
+# ignore generated .class files
+*.class
+
+# except this file
+!.gitignore

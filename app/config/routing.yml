@@ -1,0 +1,7 @@
+quizz_admin:
+    resource: "@QuizzAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
