@@ -160,4 +160,34 @@ class Topic
     {
         return $this->updated;
     }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->questions = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add questions
+     *
+     * @param \Quizz\Bundle\AdminBundle\Entity\Question $questions
+     * @return Topic
+     */
+    public function addQuestion(\Quizz\Bundle\AdminBundle\Entity\Question $questions)
+    {
+        $this->questions[] = $questions;
+
+        return $this;
+    }
+
+    /**
+     * Remove questions
+     *
+     * @param \Quizz\Bundle\AdminBundle\Entity\Question $questions
+     */
+    public function removeQuestion(\Quizz\Bundle\AdminBundle\Entity\Question $questions)
+    {
+        $this->questions->removeElement($questions);
+    }
 }
