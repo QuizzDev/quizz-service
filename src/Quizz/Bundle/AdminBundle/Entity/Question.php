@@ -41,6 +41,21 @@ class Question
     private $topics;
 
     /**
+     * @var \Doctrine\Common\Collections\ArrayCollection
+     *
+     * Many-To-Many, Bidirectional
+     *
+     * @ORM\ManyToMany(targetEntity="Quizz\Bundle\AdminBundle\Entity\Answer", mappedBy="associatedQuestions", cascade={"persist"})
+     **/
+    private $possibleAnswers;
+    
+    /**
+     * @var \Quizz\Bundle\AdminBundle\Entity\Answer
+     *
+     */
+    private $correctAnswer;
+    
+    /**
      *
      * @var datetime 
      * 
@@ -158,5 +173,68 @@ class Question
     public function getUpdated()
     {
         return $this->updated;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->topics = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add topics
+     *
+     * @param \Quizz\Bundle\AdminBundle\Entity\Topic $topics
+     * @return Question
+     */
+    public function addTopic(\Quizz\Bundle\AdminBundle\Entity\Topic $topics)
+    {
+        $this->topics[] = $topics;
+
+        return $this;
+    }
+
+    /**
+     * Remove topics
+     *
+     * @param \Quizz\Bundle\AdminBundle\Entity\Topic $topics
+     */
+    public function removeTopic(\Quizz\Bundle\AdminBundle\Entity\Topic $topics)
+    {
+        $this->topics->removeElement($topics);
+    }
+
+    /**
+     * Add possibleAnswers
+     *
+     * @param \Quizz\Bundle\AdminBundle\Entity\Answer $possibleAnswers
+     * @return Question
+     */
+    public function addPossibleAnswer(\Quizz\Bundle\AdminBundle\Entity\Answer $possibleAnswers)
+    {
+        $this->possibleAnswers[] = $possibleAnswers;
+
+        return $this;
+    }
+
+    /**
+     * Remove possibleAnswers
+     *
+     * @param \Quizz\Bundle\AdminBundle\Entity\Answer $possibleAnswers
+     */
+    public function removePossibleAnswer(\Quizz\Bundle\AdminBundle\Entity\Answer $possibleAnswers)
+    {
+        $this->possibleAnswers->removeElement($possibleAnswers);
+    }
+
+    /**
+     * Get possibleAnswers
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getPossibleAnswers()
+    {
+        return $this->possibleAnswers;
     }
 }
