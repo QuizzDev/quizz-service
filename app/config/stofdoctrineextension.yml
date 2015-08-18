@@ -1,0 +1,10 @@
+stof_doctrine_extensions:
+    default_locale: %locale%
+    orm:
+        default:
+            timestampable: true
+            sluggable: true
+            reference_integrity: true
+            softdeleteable: true
+    class:
+        sluggable: Quizz\Bundle\CommonBundle\Listener\SluggableListener
