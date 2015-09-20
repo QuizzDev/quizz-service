@@ -9,25 +9,46 @@ use Gedmo\Mapping\Annotation as Gedmo;
 /**
  * Answer
  *
- * @ORM\Table()
- * @ORM\Entity(repositoryClass="Quizz\Bundle\AdminBundle\Entity\AnswerRepository")
+ * @ORM\Entity
+ * @ORM\Table(name="answer")
+ */
+ 
+/**
+ * @ORM\Entity
+ * @ORM\InheritanceType("JOINED")
+ * @ORM\DiscriminatorColumn(name="discriminator", type="string")
+ * @ORM\DiscriminatorMap({
+ *      "drug" = "Quizz\Bundle\AdminBundle\Entity\Drug", 
+ *      "target" = "Quizz\Bundle\AdminBundle\Entity\Target",
+ *      "indication" = "Quizz\Bundle\AdminBundle\Entity\Indication",
+ *      "contraindication" = "Quizz\Bundle\AdminBundle\Entity\ContraIndication",
+ *      "advereeffect" = "Quizz\Bundle\AdminBundle\Entity\AdvereEffect"
+ * })
  */
 class Answer
 {
     /**
      * @var integer
      *
-     * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Column(name="id", type="integer")
      */
     private $id;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255)
+     */
+    private $name;
 
     /**
-     * @var \Quizz\Bundle\AdminBundle\Entity\Drug
+     * @var string
      *
+     * @ORM\Column(name="wikipedia_link", type="string", length=255)
      */
-    private $drug;
+    private $wikipediaLink;
     
     /**
      * @var \Doctrine\Common\Collections\ArrayCollection
@@ -46,55 +67,25 @@ class Answer
     private $associatedQuestions;
 
     /**
-     * @var \Quizz\Bundle\AdminBundle\Entity\Target
-     *
-     * @ORM\Column(name="target", type="object")
-     */
-    private $target;
-    
-    /**
-     * @var \Quizz\Bundle\AdminBundle\Entity\Indication
-     *
-     */
-    private $indication;
-
-    /**
-     * @var \Quizz\Bundle\AdminBundle\Entity\ContraIndication
-     *
-     */
-    private $contraIndication;
-
-    /**
-     * @var \Quizz\Bundle\AdminBundle\Entity\SideEffect
-     *
-     */
-    private $sideEffect;
-
-    /**
      * @var integer
      *
-     * @ORM\Column(name="importance", type="integer")
+     * @ORM\Column(name="importance", type="integer", nullable=true)
      */
     private $importance;
     
     /**
-     *
-     * @var datetime
-     *
-     * @Gedmo\Timestampable(on="create")
-     * @ORM\Column(name="created", type="datetime")
+     * Constructor
      */
-    private $created;
-    
-    /**
-     *
-     * @var datetime
-     *
-     * @ORM\Column(name="updated", type="datetime")
-     * @Gedmo\Timestampable(on="update")
-     */
-    private $updated;
+    public function __construct()
+    {
+        $this->associatedQuestions = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
+    public function __toString()
+    {
+        return $this->name;
+    }
+    
     /**
      * Get id
      *
@@ -103,213 +94,6 @@ class Answer
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set answer
-     *
-     * @param string $answer
-     * @return Answer
-     */
-    public function setAnswer($answer)
-    {
-        $this->answer = $answer;
-
-        return $this;
-    }
-
-    /**
-     * Get answer
-     *
-     * @return string 
-     */
-    public function getAnswer()
-    {
-        return $this->answer;
-    }
-
-    /**
-     * Set topics
-     *
-     * @param array $topics
-     * @return Answer
-     */
-    public function setTopics($topics)
-    {
-        $this->topics = $topics;
-
-        return $this;
-    }
-
-    /**
-     * Get topics
-     *
-     * @return array 
-     */
-    public function getTopics()
-    {
-        return $this->topics;
-    }
-
-    /**
-     * Set associatedQuestions
-     *
-     * @param array $associatedQuestions
-     * @return Answer
-     */
-    public function setAssociatedQuestions($associatedQuestions)
-    {
-        $this->associatedQuestions = $associatedQuestions;
-
-        return $this;
-    }
-
-    /**
-     * Get associatedQuestions
-     *
-     * @return array 
-     */
-    public function getAssociatedQuestions()
-    {
-        return $this->associatedQuestions;
-    }
-
-    /**
-     * Set drugAgentText
-     *
-     * @param string $drugAgentText
-     * @return Answer
-     */
-    public function setDrugAgentText($drugAgentText)
-    {
-        $this->drugAgentText = $drugAgentText;
-
-        return $this;
-    }
-
-    /**
-     * Get drugAgentText
-     *
-     * @return string 
-     */
-    public function getDrugAgentText()
-    {
-        return $this->drugAgentText;
-    }
-
-    /**
-     * Set indication
-     *
-     * @param \stdClass $indication
-     * @return Answer
-     */
-    public function setIndication($indication)
-    {
-        $this->indication = $indication;
-
-        return $this;
-    }
-
-    /**
-     * Get indication
-     *
-     * @return \stdClass 
-     */
-    public function getIndication()
-    {
-        return $this->indication;
-    }
-
-    /**
-     * Set contraIndication
-     *
-     * @param \stdClass $contraIndication
-     * @return Answer
-     */
-    public function setContraIndication($contraIndication)
-    {
-        $this->contraIndication = $contraIndication;
-
-        return $this;
-    }
-
-    /**
-     * Get contraIndication
-     *
-     * @return \stdClass 
-     */
-    public function getContraIndication()
-    {
-        return $this->contraIndication;
-    }
-
-    /**
-     * Set sideEffect
-     *
-     * @param \stdClass $sideEffect
-     * @return Answer
-     */
-    public function setSideEffect($sideEffect)
-    {
-        $this->sideEffect = $sideEffect;
-
-        return $this;
-    }
-
-    /**
-     * Get sideEffect
-     *
-     * @return \stdClass 
-     */
-    public function getSideEffect()
-    {
-        return $this->sideEffect;
-    }
-
-    /**
-     * Set wikipediaLink
-     *
-     * @param string $wikipediaLink
-     * @return Answer
-     */
-    public function setWikipediaLink($wikipediaLink)
-    {
-        $this->wikipediaLink = $wikipediaLink;
-
-        return $this;
-    }
-
-    /**
-     * Get wikipediaLink
-     *
-     * @return string 
-     */
-    public function getWikipediaLink()
-    {
-        return $this->wikipediaLink;
-    }
-
-    /**
-     * Set target
-     *
-     * @param \stdClass $target
-     * @return Answer
-     */
-    public function setTarget($target)
-    {
-        $this->target = $target;
-
-        return $this;
-    }
-
-    /**
-     * Get target
-     *
-     * @return \stdClass 
-     */
-    public function getTarget()
-    {
-        return $this->target;
     }
 
     /**
@@ -333,29 +117,6 @@ class Answer
     public function getImportance()
     {
         return $this->importance;
-    }
-
-    /**
-     * Set drug
-     *
-     * @param \stdClass $drug
-     * @return Answer
-     */
-    public function setDrug($drug)
-    {
-        $this->drug = $drug;
-
-        return $this;
-    }
-
-    /**
-     * Get drug
-     *
-     * @return \stdClass 
-     */
-    public function getDrug()
-    {
-        return $this->drug;
     }
 
     /**
@@ -403,13 +164,6 @@ class Answer
     {
         return $this->updated;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->associatedQuestions = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
      * Add associatedQuestions
@@ -432,5 +186,61 @@ class Answer
     public function removeAssociatedQuestion(\Quizz\Bundle\AdminBundle\Entity\Question $associatedQuestions)
     {
         $this->associatedQuestions->removeElement($associatedQuestions);
+    }
+
+    /**
+     * Get associatedQuestions
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getAssociatedQuestions()
+    {
+        return $this->associatedQuestions;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return Answer
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set wikipediaLink
+     *
+     * @param string $wikipediaLink
+     * @return Answer
+     */
+    public function setWikipediaLink($wikipediaLink)
+    {
+        $this->wikipediaLink = $wikipediaLink;
+
+        return $this;
+    }
+
+    /**
+     * Get wikipediaLink
+     *
+     * @return string 
+     */
+    public function getWikipediaLink()
+    {
+        return $this->wikipediaLink;
     }
 }

@@ -1,15 +1,49 @@
 services:
-#    quizz_admin.example:
-#        class: Quizz\Bundle\AdminBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+
     quizz_admin.admin.question:
         class: Quizz\Bundle\AdminBundle\Admin\QuestionAdmin
-        arguments: [~, Quizz\Bundle\AdminBundle\Entity\Question, QuizzAdminBundle:QuestionAdmin]
+        arguments: [~, Quizz\Bundle\AdminBundle\Entity\Question, SonataAdminBundle:CRUD]
         tags:
-            - {name: sonata.admin, manager_type: orm, group: admin, label: Question}
+            - {name: sonata.admin, manager_type: orm, group: Question, label: Question}
+            
+    quizz_admin.admin.topic:
+        class: Quizz\Bundle\AdminBundle\Admin\TopicAdmin
+        arguments: [~, Quizz\Bundle\AdminBundle\Entity\Topic, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Question, label: Topic}
 
     quizz_admin.admin.answer:
         class: Quizz\Bundle\AdminBundle\Admin\AnswerAdmin
-        arguments: [~, Quizz\Bundle\AdminBundle\Entity\Answer, QuizzAdminBundle:AnswerAdmin]
+        arguments: [~, Quizz\Bundle\AdminBundle\Entity\Answer, SonataAdminBundle:CRUD]
         tags:
-            - {name: sonata.admin, manager_type: orm, group: admin, label: Answer}
+            - {name: sonata.admin, manager_type: orm, group: Answer, label: Answer, show_in_dashboard: false}
+
+    quizz_admin.admin.drug:
+        class: Quizz\Bundle\AdminBundle\Admin\DrugAdmin
+        arguments: [~, Quizz\Bundle\AdminBundle\Entity\Drug, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Answer, label: Drug}
+
+    quizz_admin.admin.target:
+        class: Quizz\Bundle\AdminBundle\Admin\TargetAdmin
+        arguments: [~, Quizz\Bundle\AdminBundle\Entity\Target, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Answer, label: Target}
+            
+    quizz_admin.admin.indication:
+        class: Quizz\Bundle\AdminBundle\Admin\IndicationAdmin
+        arguments: [~, Quizz\Bundle\AdminBundle\Entity\Indication, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Answer, label: Indication}
+
+    quizz_admin.admin.contra_indication:
+        class: Quizz\Bundle\AdminBundle\Admin\ContraIndicationAdmin
+        arguments: [~, Quizz\Bundle\AdminBundle\Entity\ContraIndication, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Answer, label: ContraIndication}
+
+    quizz_admin.admin.advere_effect:
+        class: Quizz\Bundle\AdminBundle\Admin\AdvereEffectAdmin
+        arguments: [~, Quizz\Bundle\AdminBundle\Entity\AdvereEffect, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Answer, label: AdvereEffect}

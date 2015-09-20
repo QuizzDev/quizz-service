@@ -8,18 +8,18 @@ use Gedmo\Mapping\Annotation as Gedmo;
 /**
  * Question
  *
- * @ORM\Table()
- * @ORM\Entity(repositoryClass="Quizz\Bundle\AdminBundle\Entity\QuestionRepository")
+ * @ORM\Entity
+ * @ORM\Table(name="question")
  */
 class Question
 {
-
     /**
      *
-     * @var integer @ORM\Column(name="id", type="integer")
+     * @var integer 
      * 
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Column(name="id", type="integer")
      */
     private $id;
 
@@ -37,9 +37,10 @@ class Question
      * Many-To-Many, Bidirectional
      *
      * @ORM\ManyToMany(targetEntity="Quizz\Bundle\AdminBundle\Entity\Topic", mappedBy="questions", cascade={"persist"})
+     * @ORM\JoinTable(name="map_questions_topics")
      **/
     private $topics;
-
+    
     /**
      * @var \Doctrine\Common\Collections\ArrayCollection
      *
@@ -51,32 +52,34 @@ class Question
     
     /**
      * @var \Quizz\Bundle\AdminBundle\Entity\Answer
+     * 
+     * Many-To-One, Unidirectional
      *
+     * @ORM\ManyToOne(targetEntity="Quizz\Bundle\AdminBundle\Entity\Answer", cascade={"persist"})
      */
     private $correctAnswer;
     
     /**
      *
-     * @var datetime 
-     * 
-     * @Gedmo\Timestampable(on="create")
-     * @ORM\Column(name="created", type="datetime")
+     * @var integer
+     *
+     * @ORM\Column(name="difficulty", type="integer")
      */
-    private $created;
+    private $difficulty;
 
     /**
-     *
-     * @var datetime 
-     * 
-     * @ORM\Column(name="updated", type="datetime")
-     * @Gedmo\Timestampable(on="update")
+     * Constructor
      */
-    private $updated;
+    public function __construct()
+    {
+        $this->topics = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->possibleAnswers = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
      *
-     * @return integer
+     * @return integer 
      */
     public function getId()
     {
@@ -86,20 +89,20 @@ class Question
     /**
      * Set question
      *
-     * @param string $question            
+     * @param string $question
      * @return Question
      */
     public function setQuestion($question)
     {
         $this->question = $question;
-        
+
         return $this;
     }
 
     /**
      * Get question
      *
-     * @return string
+     * @return string 
      */
     public function getQuestion()
     {
@@ -107,45 +110,45 @@ class Question
     }
 
     /**
-     * Set topics
+     * Set difficulty
      *
-     * @param array $topics            
+     * @param integer $difficulty
      * @return Question
      */
-    public function setTopics($topics)
+    public function setDifficulty($difficulty)
     {
-        $this->topics = $topics;
-        
+        $this->difficulty = $difficulty;
+
         return $this;
     }
 
     /**
-     * Get topics
+     * Get difficulty
      *
-     * @return array
+     * @return integer 
      */
-    public function getTopics()
+    public function getDifficulty()
     {
-        return $this->topics;
+        return $this->difficulty;
     }
 
     /**
      * Set created
      *
-     * @param \DateTime $created            
+     * @param \DateTime $created
      * @return Question
      */
     public function setCreated($created)
     {
         $this->created = $created;
-        
+
         return $this;
     }
 
     /**
      * Get created
      *
-     * @return \DateTime
+     * @return \DateTime 
      */
     public function getCreated()
     {
@@ -155,31 +158,24 @@ class Question
     /**
      * Set updated
      *
-     * @param \DateTime $updated            
+     * @param \DateTime $updated
      * @return Question
      */
     public function setUpdated($updated)
     {
         $this->updated = $updated;
-        
+
         return $this;
     }
 
     /**
      * Get updated
      *
-     * @return \DateTime
+     * @return \DateTime 
      */
     public function getUpdated()
     {
         return $this->updated;
-    }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->topics = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -203,6 +199,16 @@ class Question
     public function removeTopic(\Quizz\Bundle\AdminBundle\Entity\Topic $topics)
     {
         $this->topics->removeElement($topics);
+    }
+
+    /**
+     * Get topics
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getTopics()
+    {
+        return $this->topics;
     }
 
     /**
@@ -236,5 +242,28 @@ class Question
     public function getPossibleAnswers()
     {
         return $this->possibleAnswers;
+    }
+
+    /**
+     * Set correctAnswer
+     *
+     * @param \Quizz\Bundle\AdminBundle\Entity\Answer $correctAnswer
+     * @return Question
+     */
+    public function setCorrectAnswer(\Quizz\Bundle\AdminBundle\Entity\Answer $correctAnswer = null)
+    {
+        $this->correctAnswer = $correctAnswer;
+
+        return $this;
+    }
+
+    /**
+     * Get correctAnswer
+     *
+     * @return \Quizz\Bundle\AdminBundle\Entity\Answer 
+     */
+    public function getCorrectAnswer()
+    {
+        return $this->correctAnswer;
     }
 }
