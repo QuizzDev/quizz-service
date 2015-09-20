@@ -30,11 +30,6 @@ class Target extends Answer
      * @ORM\JoinTable(name="map_drugs_targets")
      */
     private $associatedDrugs;
-
-    public function __toString()
-    {
-        return $this->description;
-    }
     
     /**
      * Set description

@@ -39,7 +39,7 @@ class Answer
     /**
      * @var string
      *
-     * @ORM\Column(name="wikipedia_link", type="string", length=255)
+     * @ORM\Column(name="wikipedia_link", type="string", length=255, nullable=true)
      */
     private $wikipediaLink;
     

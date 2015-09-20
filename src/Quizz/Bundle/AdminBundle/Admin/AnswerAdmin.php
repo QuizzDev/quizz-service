@@ -48,7 +48,17 @@ class AnswerAdmin extends Admin
     {
         $formMapper
             ->add('name')
-            ->add('importance')
+            ->add('importance', 'choice', array(
+                'label'         => 'Importance',
+                'choices'       => array(
+                    1 => 'high',
+                    2 => 'middle',
+                    3 => 'low'
+                ),
+                'required'      => false,
+                'placeholder'   => 'please choose',
+                'empty_data'    => null
+            ))
         ;
     }
 

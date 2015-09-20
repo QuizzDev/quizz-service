@@ -55,9 +55,18 @@ class QuestionAdmin extends Admin
         $formMapper
             ->add('question')
             ->add('topics')
-            ->add('difficulty')
+            ->add('difficulty', 'choice', array(
+                'label'         => 'Difficulty',
+                'choices'       => array(
+                    1 => 'high',
+                    2 => 'middle',
+                    3 => 'low'
+                ),
+                'required'      => false,
+                'placeholder'   => 'please choose',
+                'empty_data'    => null
+            ))
             ->add('possibleAnswers')
-            ->add('correctAnswer')
             ->add('correctAnswer')
         ;
     }

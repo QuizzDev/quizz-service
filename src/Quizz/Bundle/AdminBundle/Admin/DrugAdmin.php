@@ -18,9 +18,9 @@ class DrugAdmin extends Admin
         $datagridMapper
             ->add('id')
             ->add('name')
+            ->add('description')
             ->add('wikipediaLink')
             ->add('importance')
-            ->add('description')
             ->add('associatedTargets')
             ->add('associatedIndications')
             ->add('associatedContraIndications')
@@ -36,9 +36,9 @@ class DrugAdmin extends Admin
         $listMapper
             ->add('id')
             ->add('name')
+            ->add('description')
             ->add('wikipediaLink')
             ->add('importance')
-            ->add('description')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -56,9 +56,19 @@ class DrugAdmin extends Admin
     {
         $formMapper
             ->add('name')
-            ->add('wikipediaLink')
-            ->add('importance')
             ->add('description')
+            ->add('wikipediaLink')
+            ->add('importance', 'choice', array(
+                'label'         => 'Importance',
+                'choices'       => array(
+                    1 => 'high',
+                    2 => 'middle',
+                    3 => 'low'
+                ),
+                'required'      => false,
+                'placeholder'   => 'please choose',
+                'empty_data'    => null
+            ))
             ->add('associatedTargets')
             ->add('associatedIndications')
             ->add('associatedContraIndications')
@@ -74,9 +84,9 @@ class DrugAdmin extends Admin
         $showMapper
             ->add('id')
             ->add('name')
+            ->add('description')
             ->add('wikipediaLink')
             ->add('importance')
-            ->add('description')
             ->add('associatedTargets')
             ->add('associatedIndications')
             ->add('associatedContraIndications')
