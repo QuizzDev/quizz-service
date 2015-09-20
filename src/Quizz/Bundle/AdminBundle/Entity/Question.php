@@ -47,7 +47,8 @@ class Question
      * Many-To-Many, Bidirectional
      *
      * @ORM\ManyToMany(targetEntity="Quizz\Bundle\AdminBundle\Entity\Answer", mappedBy="associatedQuestions", cascade={"persist"})
-     **/
+     * @ORM\JoinTable(name="map_questions_anwers")
+     */
     private $possibleAnswers;
     
     /**
@@ -76,6 +77,11 @@ class Question
         $this->possibleAnswers = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return $this->question;
+    }
+    
     /**
      * Get id
      *

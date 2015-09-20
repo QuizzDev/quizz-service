@@ -16,6 +16,10 @@ class ContraIndication extends Answer
     /**
      * @var \Doctrine\Common\Collections\ArrayCollection
      *
+     * Many-To-Many, Bidirectional
+     *
+     * @ORM\ManyToMany(targetEntity="Quizz\Bundle\AdminBundle\Entity\Drug", inversedBy="associatedContraIndications", cascade={"persist"})
+     * @ORM\JoinTable(name="map_drugs_contraindications")
      */
     private $associatedDrugs;
 }

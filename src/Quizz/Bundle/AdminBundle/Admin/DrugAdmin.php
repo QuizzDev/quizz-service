@@ -21,6 +21,10 @@ class DrugAdmin extends Admin
             ->add('wikipediaLink')
             ->add('importance')
             ->add('description')
+            ->add('associatedTargets')
+            ->add('associatedIndications')
+            ->add('associatedContraIndications')
+            ->add('associatedAdvereEffects')
         ;
     }
 
@@ -51,11 +55,14 @@ class DrugAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('id')
             ->add('name')
             ->add('wikipediaLink')
             ->add('importance')
             ->add('description')
+            ->add('associatedTargets')
+            ->add('associatedIndications')
+            ->add('associatedContraIndications')
+            ->add('associatedAdvereEffects')
         ;
     }
 
@@ -70,6 +77,10 @@ class DrugAdmin extends Admin
             ->add('wikipediaLink')
             ->add('importance')
             ->add('description')
+            ->add('associatedTargets')
+            ->add('associatedIndications')
+            ->add('associatedContraIndications')
+            ->add('associatedAdvereEffects')
         ;
     }
 }
