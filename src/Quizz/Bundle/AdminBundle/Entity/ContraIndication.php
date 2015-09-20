@@ -22,4 +22,37 @@ class ContraIndication extends Answer
      * @ORM\JoinTable(name="map_drugs_contraindications")
      */
     private $associatedDrugs;
+
+    /**
+     * Add associatedDrugs
+     *
+     * @param \Quizz\Bundle\AdminBundle\Entity\Drug $associatedDrugs
+     * @return ContraIndication
+     */
+    public function addAssociatedDrug(\Quizz\Bundle\AdminBundle\Entity\Drug $associatedDrugs)
+    {
+        $this->associatedDrugs[] = $associatedDrugs;
+
+        return $this;
+    }
+
+    /**
+     * Remove associatedDrugs
+     *
+     * @param \Quizz\Bundle\AdminBundle\Entity\Drug $associatedDrugs
+     */
+    public function removeAssociatedDrug(\Quizz\Bundle\AdminBundle\Entity\Drug $associatedDrugs)
+    {
+        $this->associatedDrugs->removeElement($associatedDrugs);
+    }
+
+    /**
+     * Get associatedDrugs
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getAssociatedDrugs()
+    {
+        return $this->associatedDrugs;
+    }
 }

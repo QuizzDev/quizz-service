@@ -20,6 +20,7 @@ class ContraIndicationAdmin extends Admin
             ->add('name')
             ->add('wikipediaLink')
             ->add('importance')
+            ->add('associatedDrugs')
         ;
     }
 
@@ -31,8 +32,9 @@ class ContraIndicationAdmin extends Admin
         $listMapper
             ->add('id')
             ->add('name')
-            ->add('wikipediaLink')
+            ->add('wikipediaLink', 'url')
             ->add('importance')
+            ->add('associatedDrugs')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -51,7 +53,18 @@ class ContraIndicationAdmin extends Admin
         $formMapper
             ->add('name')
             ->add('wikipediaLink')
-            ->add('importance')
+            ->add('importance', 'choice', array(
+                'label'         => 'Importance',
+                'choices'       => array(
+                    1 => 'high',
+                    2 => 'middle',
+                    3 => 'low'
+                ),
+                'required'      => false,
+                'placeholder'   => 'please choose',
+                'empty_data'    => null
+            ))
+            ->add('associatedDrugs')
         ;
     }
 
@@ -63,8 +76,9 @@ class ContraIndicationAdmin extends Admin
         $showMapper
             ->add('id')
             ->add('name')
-            ->add('wikipediaLink')
+            ->add('wikipediaLink', 'url')
             ->add('importance')
+            ->add('associatedDrugs')
         ;
     }
 }

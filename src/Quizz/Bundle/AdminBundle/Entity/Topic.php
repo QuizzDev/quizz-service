@@ -9,17 +9,17 @@ use Gedmo\Mapping\Annotation as Gedmo;
 /**
  * Topic
  *
- * @ORM\Table()
- * @ORM\Entity(repositoryClass="Quizz\Bundle\AdminBundle\Entity\TopicRepository")
+ * @ORM\Entity
+ * @ORM\Table(name="topic")
  */
 class Topic
 {
     /**
      * @var integer
      *
-     * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Column(name="id", type="integer")
      */
     private $id;
 

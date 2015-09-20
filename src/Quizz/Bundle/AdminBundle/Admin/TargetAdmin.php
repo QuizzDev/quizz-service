@@ -18,9 +18,10 @@ class TargetAdmin extends Admin
         $datagridMapper
             ->add('id')
             ->add('name')
+            ->add('description')
             ->add('wikipediaLink')
             ->add('importance')
-            ->add('description')
+            ->add('associatedDrugs')
         ;
     }
 
@@ -32,9 +33,10 @@ class TargetAdmin extends Admin
         $listMapper
             ->add('id')
             ->add('name')
-            ->add('wikipediaLink')
-            ->add('importance')
             ->add('description')
+            ->add('wikipediaLink', 'url')
+            ->add('importance')
+            ->add('associatedDrugs')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -52,9 +54,20 @@ class TargetAdmin extends Admin
     {
         $formMapper
             ->add('name')
-            ->add('wikipediaLink')
-            ->add('importance')
             ->add('description')
+            ->add('wikipediaLink')
+            ->add('importance', 'choice', array(
+                'label'         => 'Importance',
+                'choices'       => array(
+                    1 => 'high',
+                    2 => 'middle',
+                    3 => 'low'
+                ),
+                'required'      => false,
+                'placeholder'   => 'please choose',
+                'empty_data'    => null
+            ))
+            ->add('associatedDrugs')
         ;
     }
 
@@ -66,9 +79,10 @@ class TargetAdmin extends Admin
         $showMapper
             ->add('id')
             ->add('name')
-            ->add('wikipediaLink')
-            ->add('importance')
             ->add('description')
+            ->add('wikipediaLink', 'url')
+            ->add('importance')
+            ->add('associatedDrugs')
         ;
     }
 }
