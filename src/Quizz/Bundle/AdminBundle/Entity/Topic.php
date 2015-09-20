@@ -41,25 +41,6 @@ class Topic
     private $questions;
 
     /**
-     *
-     * @var datetime 
-     * 
-     * @Gedmo\Timestampable(on="create")
-     * @ORM\Column(name="created", type="datetime")
-     */
-    private $created;
-    
-    /**
-     *
-     * @var datetime 
-     * 
-     * @ORM\Column(name="updated", type="datetime")
-     * @Gedmo\Timestampable(on="update")
-     */
-    private $updated;
-    
-
-    /**
      * Get id
      *
      * @return integer 

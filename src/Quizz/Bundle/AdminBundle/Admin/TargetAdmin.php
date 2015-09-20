@@ -8,7 +8,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 
-class AnswerAdmin extends Admin
+class TargetAdmin extends Admin
 {
     /**
      * @param DatagridMapper $datagridMapper
@@ -18,7 +18,9 @@ class AnswerAdmin extends Admin
         $datagridMapper
             ->add('id')
             ->add('name')
+            ->add('wikipediaLink')
             ->add('importance')
+            ->add('description')
         ;
     }
 
@@ -30,7 +32,9 @@ class AnswerAdmin extends Admin
         $listMapper
             ->add('id')
             ->add('name')
+            ->add('wikipediaLink')
             ->add('importance')
+            ->add('description')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -49,7 +53,9 @@ class AnswerAdmin extends Admin
         $formMapper
             ->add('id')
             ->add('name')
+            ->add('wikipediaLink')
             ->add('importance')
+            ->add('description')
         ;
     }
 
@@ -61,7 +67,9 @@ class AnswerAdmin extends Admin
         $showMapper
             ->add('id')
             ->add('name')
+            ->add('wikipediaLink')
             ->add('importance')
+            ->add('description')
         ;
     }
 }

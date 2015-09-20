@@ -7,19 +7,12 @@ use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
- * Target
+ * AdvereEffects
  *
  * @ORM\Entity
  */
-class Target extends Answer
-{    
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="description", type="string", length=255)
-     */
-    private $description;
-    
+class AdvereEffect extends Answer
+{
     /**
      * @var \Doctrine\Common\Collections\ArrayCollection
      *

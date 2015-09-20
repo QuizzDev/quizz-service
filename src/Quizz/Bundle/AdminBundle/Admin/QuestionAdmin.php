@@ -18,8 +18,9 @@ class QuestionAdmin extends Admin
         $datagridMapper
             ->add('id')
             ->add('question')
-            ->add('created')
-            ->add('updated')
+            ->add('difficulty')
+            ->add('possibleAnswers')
+            ->add('correctAnswer')
         ;
     }
 
@@ -31,8 +32,9 @@ class QuestionAdmin extends Admin
         $listMapper
             ->add('id')
             ->add('question')
-            ->add('created')
-            ->add('updated')
+            ->add('difficulty')
+            ->add('possibleAnswers')
+            ->add('correctAnswer')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -49,10 +51,11 @@ class QuestionAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('id')
             ->add('question')
-            ->add('created')
-            ->add('updated')
+            ->add('difficulty')
+            ->add('possibleAnswers')
+            ->add('correctAnswer')
+            ->add('correctAnswer')
         ;
     }
 
@@ -64,8 +67,9 @@ class QuestionAdmin extends Admin
         $showMapper
             ->add('id')
             ->add('question')
-            ->add('created')
-            ->add('updated')
+            ->add('difficulty')
+            ->add('possibleAnswers')
+            ->add('correctAnswer')
         ;
     }
 }
