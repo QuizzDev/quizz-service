@@ -40,6 +40,11 @@ class Topic
      */
     private $questions;
 
+    public function __toString()
+    {
+        return $this->topic;
+    }
+    
     /**
      * Get id
      *

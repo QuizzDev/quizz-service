@@ -18,6 +18,7 @@ class QuestionAdmin extends Admin
         $datagridMapper
             ->add('id')
             ->add('question')
+            ->add('topics')
             ->add('difficulty')
             ->add('possibleAnswers')
             ->add('correctAnswer')
@@ -32,6 +33,7 @@ class QuestionAdmin extends Admin
         $listMapper
             ->add('id')
             ->add('question')
+            ->add('topics')
             ->add('difficulty')
             ->add('possibleAnswers')
             ->add('correctAnswer')
@@ -52,6 +54,7 @@ class QuestionAdmin extends Admin
     {
         $formMapper
             ->add('question')
+            ->add('topics')
             ->add('difficulty')
             ->add('possibleAnswers')
             ->add('correctAnswer')
@@ -67,6 +70,7 @@ class QuestionAdmin extends Admin
         $showMapper
             ->add('id')
             ->add('question')
+            ->add('topics')
             ->add('difficulty')
             ->add('possibleAnswers')
             ->add('correctAnswer')

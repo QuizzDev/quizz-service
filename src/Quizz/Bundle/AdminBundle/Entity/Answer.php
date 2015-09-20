@@ -7,13 +7,6 @@ use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
- * Answer
- *
- * @ORM\Entity
- * @ORM\Table(name="answer")
- */
- 
-/**
  * @ORM\Entity
  * @ORM\InheritanceType("JOINED")
  * @ORM\DiscriminatorColumn(name="discriminator", type="string")
