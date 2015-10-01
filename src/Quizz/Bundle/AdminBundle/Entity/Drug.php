@@ -92,6 +92,8 @@ class Drug extends Answer
      */
     public function addAssociatedTarget(\Quizz\Bundle\AdminBundle\Entity\Target $associatedTargets)
     {
+        $associatedTargets->addAssociatedDrug($this);
+        
         $this->associatedTargets[] = $associatedTargets;
 
         return $this;
@@ -125,6 +127,8 @@ class Drug extends Answer
      */
     public function addAssociatedIndication(\Quizz\Bundle\AdminBundle\Entity\Indication $associatedIndications)
     {
+        $associatedIndications->addAssociatedDrug($this);
+        
         $this->associatedIndications[] = $associatedIndications;
 
         return $this;
@@ -158,6 +162,8 @@ class Drug extends Answer
      */
     public function addAssociatedContraIndication(\Quizz\Bundle\AdminBundle\Entity\ContraIndication $associatedContraIndications)
     {
+        $associatedContraIndications->addAssociatedDrug($this);
+        
         $this->associatedContraIndications[] = $associatedContraIndications;
 
         return $this;
@@ -191,6 +197,8 @@ class Drug extends Answer
      */
     public function addAssociatedAdvereEffect(\Quizz\Bundle\AdminBundle\Entity\AdvereEffect $associatedAdvereEffects)
     {
+        $associatedAdvereEffects->addAssociatedDrug($this);
+        
         $this->associatedAdvereEffects[] = $associatedAdvereEffects;
 
         return $this;

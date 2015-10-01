@@ -54,7 +54,13 @@ class QuestionAdmin extends Admin
     {
         $formMapper
             ->add('question')
-            ->add('topics')
+            ->add('topics', 'sonata_type_model', array(
+                'required'     => false,
+                'label'        => 'Topics',
+                'expanded'     => false,
+                'by_reference' => false,
+                'multiple'     => true
+            ))
             ->add('difficulty', 'choice', array(
                 'label'         => 'Difficulty',
                 'choices'       => array(
@@ -66,7 +72,13 @@ class QuestionAdmin extends Admin
                 'placeholder'   => 'please choose',
                 'empty_data'    => null
             ))
-            ->add('possibleAnswers')
+            ->add('possibleAnswers', 'sonata_type_model', array(
+                'required'     => false,
+                'label'        => 'Possible Answers',
+                'expanded'     => false,
+                'by_reference' => false,
+                'multiple'     => true
+            ))
             ->add('correctAnswer')
         ;
     }

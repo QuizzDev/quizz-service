@@ -39,7 +39,15 @@ class Topic
      * @ORM\JoinTable(name="map_questions_topics")
      */
     private $questions;
-
+    
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->questions = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
     public function __toString()
     {
         return $this->topic;
@@ -145,13 +153,6 @@ class Topic
     public function getUpdated()
     {
         return $this->updated;
-    }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->questions = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
