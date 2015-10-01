@@ -192,6 +192,8 @@ class Question
      */
     public function addTopic(\Quizz\Bundle\AdminBundle\Entity\Topic $topics)
     {
+        $topics->addQuestion($this);
+        
         $this->topics[] = $topics;
 
         return $this;
@@ -225,6 +227,8 @@ class Question
      */
     public function addPossibleAnswer(\Quizz\Bundle\AdminBundle\Entity\Answer $possibleAnswers)
     {
+        $possibleAnswers->addAssociatedQuestion($this);
+        
         $this->possibleAnswers[] = $possibleAnswers;
 
         return $this;
