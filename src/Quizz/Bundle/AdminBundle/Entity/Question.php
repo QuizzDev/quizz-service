@@ -206,6 +206,8 @@ class Question
      */
     public function removeTopic(\Quizz\Bundle\AdminBundle\Entity\Topic $topics)
     {
+        $topics->removeQuestion($this);
+        
         $this->topics->removeElement($topics);
     }
 
@@ -241,6 +243,8 @@ class Question
      */
     public function removePossibleAnswer(\Quizz\Bundle\AdminBundle\Entity\Answer $possibleAnswers)
     {
+        $possibleAnswers->removeAssociatedQuestion($this);
+        
         $this->possibleAnswers->removeElement($possibleAnswers);
     }
 
