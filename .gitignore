@@ -1,20 +1,20 @@
 #symfony specific
-/app/cache/*
-/app/logs/*
-/app/bootstrap.php.cache
-/app/DoctrineMigrations/
-/web/bundles/
-.bin
-/bin/
-/vendor/
-/web/css/
-/web/media/
-/web/js/
-/web/images/
+quizz-admin/app/cache/*
+quizz-admin/app/logs/*
+quizz-admin/app/bootstrap.php.cache
+quizz-admin/app/DoctrineMigrations/
+quizz-admin/web/bundles/
+quizz-admin.bin
+quizz-admin/bin/
+quizz-admin/vendor/
+quizz-admin/web/css/
+quizz-admin/web/media/
+quizz-admin/web/js/
+quizz-admin/web/images/
 
 
 #configs
-/app/config/parameters.yml
+quizz-admin/app/config/parameters.yml
 
 # generic files to ignore
 # backup files (*~) and vim swap file (.swp), MacOS dir file (.DS_Store)
