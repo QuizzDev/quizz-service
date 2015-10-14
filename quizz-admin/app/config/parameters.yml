@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: localhost
+    database_port: 3306
+    database_name: quizz
+    database_user: quizz
+    database_password: v1M3da0rV1l3dA
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 0d676435baf89f27d8ea1ec8968efd6b5c50193d
