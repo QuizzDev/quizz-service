@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.root_dir">/Users/janschaedlich/htdocs/quizz/app</parameter>
+    <parameter key="kernel.root_dir">/Users/janschaedlich/htdocs/quizz/quizz-admin/app</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
     <parameter key="kernel.name">ap_</parameter>
-    <parameter key="kernel.cache_dir">/Users/janschaedlich/htdocs/quizz/app/cache/dev</parameter>
-    <parameter key="kernel.logs_dir">/Users/janschaedlich/htdocs/quizz/app/logs</parameter>
+    <parameter key="kernel.cache_dir">/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev</parameter>
+    <parameter key="kernel.logs_dir">/Users/janschaedlich/htdocs/quizz/quizz-admin/app/logs</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="SecurityBundle">Symfony\Bundle\SecurityBundle\SecurityBundle</parameter>
@@ -111,7 +111,7 @@
     <parameter key="session.storage.options" type="collection">
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">/Users/janschaedlich/htdocs/quizz/app/cache/dev/sessions</parameter>
+    <parameter key="session.save_path">/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="security.secure_random.class">Symfony\Component\Security\Core\Util\SecureRandom</parameter>
     <parameter key="form.resolved_type_factory.class">Symfony\Component\Form\ResolvedFormTypeFactory</parameter>
@@ -169,7 +169,7 @@
     <parameter key="data_collector.form.extractor.class">Symfony\Component\Form\Extension\DataCollector\FormDataExtractor</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:/Users/janschaedlich/htdocs/quizz/app/cache/dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev/profiler</parameter>
     <parameter key="profiler.storage.username"></parameter>
     <parameter key="profiler.storage.password"></parameter>
     <parameter key="profiler.storage.lifetime">86400</parameter>
@@ -193,7 +193,7 @@
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
-    <parameter key="router.resource">/Users/janschaedlich/htdocs/quizz/app/cache/dev/assetic/routing.yml</parameter>
+    <parameter key="router.resource">/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev/assetic/routing.yml</parameter>
     <parameter key="router.cache_class_prefix">appDev</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
@@ -204,7 +204,7 @@
     <parameter key="debug.stopwatch.class">Symfony\Component\Stopwatch\Stopwatch</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
     <parameter key="debug.event_dispatcher.class">Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher</parameter>
-    <parameter key="debug.container.dump">/Users/janschaedlich/htdocs/quizz/app/cache/dev/appDevDebugProjectContainer.xml</parameter>
+    <parameter key="debug.container.dump">/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev/appDevDebugProjectContainer.xml</parameter>
     <parameter key="debug.controller_resolver.class">Symfony\Component\HttpKernel\Controller\TraceableControllerResolver</parameter>
     <parameter key="security.context.class">Symfony\Component\Security\Core\SecurityContext</parameter>
     <parameter key="security.user_checker.class">Symfony\Component\Security\Core\User\UserChecker</parameter>
@@ -385,7 +385,7 @@
     <parameter key="swiftmailer.mailer.default.transport.smtp.auth_mode">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.source_ip">null</parameter>
-    <parameter key="swiftmailer.spool.default.memory.path">/Users/janschaedlich/htdocs/quizz/app/cache/dev/swiftmailer/spool/default</parameter>
+    <parameter key="swiftmailer.spool.default.memory.path">/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev/swiftmailer/spool/default</parameter>
     <parameter key="swiftmailer.mailer.default.spool.enabled">true</parameter>
     <parameter key="swiftmailer.mailer.default.plugin.impersonate">null</parameter>
     <parameter key="swiftmailer.mailer.default.single_address">null</parameter>
@@ -410,7 +410,7 @@
     <parameter key="assetic.worker.cache_busting.class">Assetic\Factory\Worker\CacheBustingWorker</parameter>
     <parameter key="assetic.value_supplier.class">Symfony\Bundle\AsseticBundle\DefaultValueSupplier</parameter>
     <parameter key="assetic.node.paths" type="collection"/>
-    <parameter key="assetic.cache_dir">/Users/janschaedlich/htdocs/quizz/app/cache/dev/assetic</parameter>
+    <parameter key="assetic.cache_dir">/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev/assetic</parameter>
     <parameter key="assetic.bundles" type="collection"/>
     <parameter key="assetic.twig_extension.class">Symfony\Bundle\AsseticBundle\Twig\AsseticExtension</parameter>
     <parameter key="assetic.twig_formula_loader.class">Assetic\Extension\Twig\TwigFormulaLoader</parameter>
@@ -420,8 +420,8 @@
     <parameter key="assetic.debug">true</parameter>
     <parameter key="assetic.use_controller">true</parameter>
     <parameter key="assetic.enable_profiler">false</parameter>
-    <parameter key="assetic.read_from">/Users/janschaedlich/htdocs/quizz/app/../web</parameter>
-    <parameter key="assetic.write_to">/Users/janschaedlich/htdocs/quizz/app/../web</parameter>
+    <parameter key="assetic.read_from">/Users/janschaedlich/htdocs/quizz/quizz-admin/app/../web</parameter>
+    <parameter key="assetic.write_to">/Users/janschaedlich/htdocs/quizz/quizz-admin/app/../web</parameter>
     <parameter key="assetic.variables" type="collection"/>
     <parameter key="assetic.java.bin">/usr/bin/java</parameter>
     <parameter key="assetic.node.bin">/usr/local/bin/node</parameter>
@@ -533,7 +533,7 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">/Users/janschaedlich/htdocs/quizz/app/cache/dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="sensio_framework_extra.view.guesser.class">Sensio\Bundle\FrameworkExtraBundle\Templating\TemplateGuesser</parameter>
     <parameter key="sensio_framework_extra.controller.listener.class">Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener</parameter>
@@ -749,7 +749,7 @@
     <parameter key="knp_menu.renderer.twig.options" type="collection"/>
     <parameter key="knp_menu.renderer.twig.template">knp_menu.html.twig</parameter>
     <parameter key="knp_menu.default_renderer">twig</parameter>
-    <parameter key="doctrine_migrations.dir_name">/Users/janschaedlich/htdocs/quizz/app/DoctrineMigrations</parameter>
+    <parameter key="doctrine_migrations.dir_name">/Users/janschaedlich/htdocs/quizz/quizz-admin/app/DoctrineMigrations</parameter>
     <parameter key="doctrine_migrations.namespace">Application\Migrations</parameter>
     <parameter key="doctrine_migrations.table_name">migration_versions</parameter>
     <parameter key="doctrine_migrations.name">Application Migrations</parameter>
@@ -880,7 +880,7 @@
               <service class="Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder" public="false">
                 <argument type="service" id="kernel"/>
                 <argument type="service" id="templating.filename_parser"/>
-                <argument>/Users/janschaedlich/htdocs/quizz/app/Resources</argument>
+                <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/app/Resources</argument>
               </service>
             </argument>
             <argument type="service" id="templating.locator"/>
@@ -922,7 +922,7 @@
     <service id="filesystem" class="Symfony\Component\Filesystem\Filesystem"/>
     <service id="file_locator" class="Symfony\Component\HttpKernel\Config\FileLocator">
       <argument type="service" id="kernel"/>
-      <argument>/Users/janschaedlich/htdocs/quizz/app/Resources</argument>
+      <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/app/Resources</argument>
     </service>
     <service id="uri_signer" class="Symfony\Component\HttpKernel\UriSigner">
       <argument>0d676435baf89f27d8ea1ec8968efd6b5c50193d</argument>
@@ -1030,295 +1030,295 @@
         </argument>
       </argument>
       <argument type="collection">
-        <argument key="cache_dir">/Users/janschaedlich/htdocs/quizz/app/cache/dev/translations</argument>
+        <argument key="cache_dir">/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev/translations</argument>
         <argument key="debug">true</argument>
         <argument key="resource_files" type="collection">
           <argument key="af" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.af.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.af.xlf</argument>
           </argument>
           <argument key="ar" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ar.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ar.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ar.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.ar.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.ar.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ar.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ar.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ar.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.ar.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.ar.xliff</argument>
           </argument>
           <argument key="az" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.az.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.az.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.az.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.az.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.az.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.az.xlf</argument>
           </argument>
           <argument key="bg" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.bg.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.bg.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.bg.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.bg.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.bg.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.bg.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.bg.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.bg.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.bg.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.bg.xliff</argument>
           </argument>
           <argument key="ca" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ca.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ca.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ca.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.ca.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.ca.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ca.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ca.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ca.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.ca.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.ca.xliff</argument>
           </argument>
           <argument key="cs" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.cs.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.cs.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.cs.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.cs.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.cs.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.cs.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.cs.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.cs.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.cs.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.cs.xliff</argument>
           </argument>
           <argument key="cy" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.cy.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.cy.xlf</argument>
           </argument>
           <argument key="da" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.da.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.da.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.da.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.da.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.da.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.da.xlf</argument>
           </argument>
           <argument key="de" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.de.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.de.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.de.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.de.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.de.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.de.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.de.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.de.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.de.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.de.xliff</argument>
           </argument>
           <argument key="el" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.el.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.el.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.el.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.el.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.el.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.el.xlf</argument>
           </argument>
           <argument key="en" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.en.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.en.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.en.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.en.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.en.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.en.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.en.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.en.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.en.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.en.xliff</argument>
           </argument>
           <argument key="es" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.es.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.es.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.es.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.es.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.es.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.es.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.es.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.es.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.es.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.es.xliff</argument>
           </argument>
           <argument key="et" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.et.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.et.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.et.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.et.xlf</argument>
           </argument>
           <argument key="eu" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.eu.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.eu.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.eu.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.eu.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.eu.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.eu.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.eu.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.eu.xliff</argument>
           </argument>
           <argument key="fa" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fa.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.fa.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.fa.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.fa.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.fa.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fa.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.fa.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.fa.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.fa.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.fa.xliff</argument>
           </argument>
           <argument key="fi" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fi.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.fi.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.fi.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fi.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.fi.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.fi.xliff</argument>
           </argument>
           <argument key="fr" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fr.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.fr.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.fr.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.fr.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.fr.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/src/Quizz/Bundle/AdminBundle/Resources/translations/messages.fr.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fr.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.fr.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.fr.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.fr.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.fr.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/src/Quizz/Bundle/AdminBundle/Resources/translations/messages.fr.xlf</argument>
           </argument>
           <argument key="gl" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.gl.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.gl.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.gl.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.gl.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.gl.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.gl.xlf</argument>
           </argument>
           <argument key="he" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.he.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.he.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.he.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.he.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.he.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.he.xlf</argument>
           </argument>
           <argument key="hr" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.hr.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.hr.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.hr.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.hr.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.hr.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.hr.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.hr.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.hr.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.hr.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.hr.xliff</argument>
           </argument>
           <argument key="hu" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.hu.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.hu.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.hu.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.hu.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.hu.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.hu.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.hu.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.hu.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.hu.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.hu.xliff</argument>
           </argument>
           <argument key="hy" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.hy.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.hy.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.hy.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.hy.xlf</argument>
           </argument>
           <argument key="id" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.id.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.id.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.id.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.id.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.id.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.id.xlf</argument>
           </argument>
           <argument key="it" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.it.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.it.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.it.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.it.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.it.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.it.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.it.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.it.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.it.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.it.xliff</argument>
           </argument>
           <argument key="ja" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ja.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ja.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ja.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.ja.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.ja.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ja.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ja.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ja.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.ja.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.ja.xliff</argument>
           </argument>
           <argument key="lb" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.lb.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.lb.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.lb.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.lb.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.lb.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.lb.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.lb.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.lb.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.lb.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.lb.xliff</argument>
           </argument>
           <argument key="lt" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.lt.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.lt.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.lt.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.lt.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.lt.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.lt.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.lt.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.lt.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.lt.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.lt.xliff</argument>
           </argument>
           <argument key="mn" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.mn.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.mn.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.mn.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.mn.xlf</argument>
           </argument>
           <argument key="nb" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.nb.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.nb.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.nb.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.nb.xlf</argument>
           </argument>
           <argument key="nl" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.nl.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.nl.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.nl.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.nl.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.nl.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.nl.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.nl.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.nl.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.nl.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.nl.xliff</argument>
           </argument>
           <argument key="no" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.no.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.no.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.no.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.no.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.no.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.no.xliff</argument>
           </argument>
           <argument key="pl" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.pl.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.pl.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.pl.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.pl.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.pl.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.pl.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.pl.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.pl.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.pl.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.pl.xliff</argument>
           </argument>
           <argument key="pt" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.pt.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.pt.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.pt.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.pt.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.pt.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.pt.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.pt.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.pt.xliff</argument>
           </argument>
           <argument key="pt_BR" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.pt_BR.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.pt_BR.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.pt_BR.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.pt_BR.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.pt_BR.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.pt_BR.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.pt_BR.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.pt_BR.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.pt_BR.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.pt_BR.xliff</argument>
           </argument>
           <argument key="ro" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ro.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ro.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ro.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.ro.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.ro.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ro.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ro.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ro.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.ro.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.ro.xliff</argument>
           </argument>
           <argument key="ru" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ru.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ru.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ru.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.ru.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.ru.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.ru.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.ru.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ru.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.ru.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.ru.xliff</argument>
           </argument>
           <argument key="sk" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sk.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sk.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sk.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.sk.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.sk.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sk.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sk.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sk.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.sk.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.sk.xliff</argument>
           </argument>
           <argument key="sl" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sl.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sl.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sl.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.sl.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.sl.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sl.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sl.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sl.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.sl.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.sl.xliff</argument>
           </argument>
           <argument key="sq" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sq.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sq.xlf</argument>
           </argument>
           <argument key="sr_Cyrl" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sr_Cyrl.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sr_Cyrl.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sr_Cyrl.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sr_Cyrl.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sr_Cyrl.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sr_Cyrl.xlf</argument>
           </argument>
           <argument key="sr_Latn" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sr_Latn.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sr_Latn.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sr_Latn.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sr_Latn.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sr_Latn.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sr_Latn.xlf</argument>
           </argument>
           <argument key="sv" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sv.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sv.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sv.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.sv.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.sv.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.sv.xlf</argument>
           </argument>
           <argument key="th" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.th.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.th.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.th.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.th.xlf</argument>
           </argument>
           <argument key="tr" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.tr.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.tr.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.tr.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.tr.xlf</argument>
           </argument>
           <argument key="uk" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.uk.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.uk.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.uk.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.uk.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.uk.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.uk.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.uk.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.uk.xliff</argument>
           </argument>
           <argument key="vi" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.vi.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.vi.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.vi.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.vi.xlf</argument>
           </argument>
           <argument key="zh_CN" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.zh_CN.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.zh_CN.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.zh_CN.xlf</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.zh_CN.xliff</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.zh_CN.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.zh_CN.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.zh_CN.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.zh_CN.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/translations/SonataCoreBundle.zh_CN.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.zh_CN.xliff</argument>
           </argument>
           <argument key="zh_TW" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.zh_TW.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.zh_TW.xlf</argument>
           </argument>
           <argument key="lv" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.lv.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.lv.xlf</argument>
           </argument>
           <argument key="pt_PT" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.pt_PT.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.pt_PT.xlf</argument>
           </argument>
           <argument key="ua" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ua.xlf</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.ua.xlf</argument>
           </argument>
           <argument key="sv_SE" type="collection">
-            <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.sv_SE.xliff</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/translations/SonataAdminBundle.sv_SE.xliff</argument>
           </argument>
         </argument>
       </argument>
@@ -1534,7 +1534,7 @@
     </service>
     <service id="security.secure_random" class="Symfony\Component\Security\Core\Util\SecureRandom">
       <tag name="monolog.logger" channel="security"/>
-      <argument>/Users/janschaedlich/htdocs/quizz/app/cache/dev/secure_random.seed</argument>
+      <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev/secure_random.seed</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="ignore"/>
     </service>
     <service id="form.resolved_type_factory" class="Symfony\Component\Form\Extension\DataCollector\Proxy\ResolvedTypeFactoryDataCollectorProxy">
@@ -1803,7 +1803,7 @@
     <service id="templating.filename_parser" class="Symfony\Bundle\FrameworkBundle\Templating\TemplateFilenameParser"/>
     <service id="templating.locator" class="Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator" public="false">
       <argument type="service" id="file_locator"/>
-      <argument>/Users/janschaedlich/htdocs/quizz/app/cache/dev</argument>
+      <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev</argument>
     </service>
     <service id="templating.helper.assets" class="Symfony\Bundle\FrameworkBundle\Templating\Helper\AssetsHelper">
       <tag name="templating.helper" alias="assets"/>
@@ -1829,7 +1829,7 @@
       </call>
       <call method="addXmlMappings">
         <argument type="collection">
-          <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml</argument>
+          <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml</argument>
         </argument>
       </call>
       <call method="enableAnnotationMapping">
@@ -1873,7 +1873,7 @@
       <tag name="monolog.logger" channel="profiler"/>
       <argument type="service">
         <service class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage" public="false">
-          <argument>file:/Users/janschaedlich/htdocs/quizz/app/cache/dev/profiler</argument>
+          <argument>file:/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev/profiler</argument>
           <argument></argument>
           <argument></argument>
           <argument>86400</argument>
@@ -2306,7 +2306,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>560c06fd3fe3a2.71890530</argument>
+            <argument>561e9610ae2324.76266190</argument>
           </service>
         </argument>
       </argument>
@@ -2429,7 +2429,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>560c06fd3fe3a2.71890530</argument>
+            <argument>561e9610ae2324.76266190</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2475,7 +2475,7 @@
           <argument>form_div_layout.html.twig</argument>
         </argument>
         <argument key="autoescape">filename</argument>
-        <argument key="cache">/Users/janschaedlich/htdocs/quizz/app/cache/dev/twig</argument>
+        <argument key="cache">/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="paths" type="collection"/>
         <argument key="date" type="collection">
@@ -2549,7 +2549,7 @@
           <service class="Symfony\Bridge\Twig\Extension\CodeExtension" public="false">
             <tag name="twig.extension"/>
             <argument>null</argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/app</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/app</argument>
             <argument>UTF-8</argument>
           </service>
         </argument>
@@ -2774,7 +2774,7 @@
       <argument>twig.controller.exception:showAction</argument>
     </service>
     <service id="monolog.handler.main" class="Monolog\Handler\StreamHandler">
-      <argument>/Users/janschaedlich/htdocs/quizz/app/logs/dev.log</argument>
+      <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/app/logs/dev.log</argument>
       <argument>100</argument>
       <argument>true</argument>
       <argument>null</argument>
@@ -2836,7 +2836,7 @@
             </argument>
             <argument type="service">
               <service class="Assetic\Cache\ConfigCache" public="false">
-                <argument>/Users/janschaedlich/htdocs/quizz/app/cache/dev/assetic/config</argument>
+                <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev/assetic/config</argument>
               </service>
             </argument>
             <argument>true</argument>
@@ -2850,7 +2850,7 @@
             <tag name="assetic.formula_resource" loader="twig"/>
             <argument type="service" id="templating.loader"/>
             <argument></argument>
-            <argument>/Users/janschaedlich/htdocs/quizz/app/Resources/views</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/app/Resources/views</argument>
             <argument>/\.[^.]+\.twig$/</argument>
           </service>
         </argument>
@@ -2865,7 +2865,7 @@
           <factory service="service_container" method="getParameterBag"/>
         </service>
       </argument>
-      <argument>/Users/janschaedlich/htdocs/quizz/app/../web</argument>
+      <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/app/../web</argument>
       <argument>true</argument>
       <call method="addWorker">
         <argument type="service">
@@ -2882,7 +2882,7 @@
       <argument type="service" id="assetic.asset_manager"/>
       <argument type="service">
         <service class="Assetic\Cache\FilesystemCache" public="false">
-          <argument>/Users/janschaedlich/htdocs/quizz/app/cache/dev/assetic/assets</argument>
+          <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev/assetic/assets</argument>
         </service>
       </argument>
       <argument>false</argument>
@@ -3005,17 +3005,17 @@
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_metadata_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf2orm_default_0ab0d639a1a8f88c7ec347ebd68af819da90088edab3aba0b0340eda39e57c05</argument>
+        <argument>sf2orm_default_79834475d3a613f72587304d5055e87f526ff14f7ead19c0d6a9d6add6273f0b</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_result_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf2orm_default_0ab0d639a1a8f88c7ec347ebd68af819da90088edab3aba0b0340eda39e57c05</argument>
+        <argument>sf2orm_default_79834475d3a613f72587304d5055e87f526ff14f7ead19c0d6a9d6add6273f0b</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_query_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf2orm_default_0ab0d639a1a8f88c7ec347ebd68af819da90088edab3aba0b0340eda39e57c05</argument>
+        <argument>sf2orm_default_79834475d3a613f72587304d5055e87f526ff14f7ead19c0d6a9d6add6273f0b</argument>
       </call>
     </service>
     <service id="doctrine.orm.default_entity_listener_resolver" class="Doctrine\ORM\Mapping\DefaultEntityListenerResolver"/>
@@ -3049,7 +3049,7 @@
                     <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
                       <argument type="service" id="annotation_reader"/>
                       <argument type="collection">
-                        <argument>/Users/janschaedlich/htdocs/quizz/src/Quizz/Bundle/AdminBundle/Entity</argument>
+                        <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/src/Quizz/Bundle/AdminBundle/Entity</argument>
                       </argument>
                     </service>
                   </argument>
@@ -3059,7 +3059,7 @@
             </argument>
           </call>
           <call method="setProxyDir">
-            <argument>/Users/janschaedlich/htdocs/quizz/app/cache/dev/doctrine/orm/Proxies</argument>
+            <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev/doctrine/orm/Proxies</argument>
           </call>
           <call method="setProxyNamespace">
             <argument>Proxies</argument>
@@ -3990,7 +3990,7 @@
       <argument type="service" id="sonata.admin.route.cache"/>
     </service>
     <service id="sonata.admin.route.cache" class="Sonata\AdminBundle\Route\RoutesCache">
-      <argument>/Users/janschaedlich/htdocs/quizz/app/cache/dev/sonata/admin</argument>
+      <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev/sonata/admin</argument>
       <argument>true</argument>
     </service>
     <service id="sonata.admin.route.cache_warmup" class="Sonata\AdminBundle\Route\RoutesCacheWarmUp">
@@ -5084,7 +5084,7 @@
       <argument>^/(app(_[\w]+)?\.php/)?_wdt</argument>
     </service>
     <service id="sensio_distribution.webconfigurator" class="Sensio\Bundle\DistributionBundle\Configurator\Configurator">
-      <argument>/Users/janschaedlich/htdocs/quizz/app</argument>
+      <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/app</argument>
       <call method="addStep">
         <argument type="service">
           <service class="Sensio\Bundle\DistributionBundle\Configurator\Step\DoctrineStep" public="false">
@@ -5232,7 +5232,7 @@
       <argument>true</argument>
     </service>
     <service id="session.storage.filesystem" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage">
-      <argument>/Users/janschaedlich/htdocs/quizz/app/cache/dev/sessions</argument>
+      <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
@@ -5256,9 +5256,9 @@
     <service id="router" class="Symfony\Bundle\FrameworkBundle\Routing\Router">
       <tag name="monolog.logger" channel="router"/>
       <argument type="service" id="service_container"/>
-      <argument>/Users/janschaedlich/htdocs/quizz/app/cache/dev/assetic/routing.yml</argument>
+      <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev/assetic/routing.yml</argument>
       <argument type="collection">
-        <argument key="cache_dir">/Users/janschaedlich/htdocs/quizz/app/cache/dev</argument>
+        <argument key="cache_dir">/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
         <argument key="generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
@@ -5278,7 +5278,7 @@
       <argument type="service">
         <service class="Doctrine\Common\Annotations\AnnotationReader" public="false"/>
       </argument>
-      <argument>/Users/janschaedlich/htdocs/quizz/app/cache/dev/annotations</argument>
+      <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/app/cache/dev/annotations</argument>
       <argument>true</argument>
     </service>
     <service id="security.encoder_factory" class="Symfony\Component\Security\Core\Encoder\EncoderFactory">
@@ -5292,69 +5292,69 @@
       <argument type="service" id="templating.locator"/>
       <argument type="service" id="templating.name_parser"/>
       <call method="addPath">
-        <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views</argument>
+        <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views</argument>
         <argument>Framework</argument>
       </call>
       <call method="addPath">
-        <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
+        <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
       <call method="addPath">
-        <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views</argument>
+        <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views</argument>
         <argument>Twig</argument>
       </call>
       <call method="addPath">
-        <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/swiftmailer-bundle/Resources/views</argument>
+        <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/swiftmailer-bundle/Resources/views</argument>
         <argument>Swiftmailer</argument>
       </call>
       <call method="addPath">
-        <argument>/Users/janschaedlich/htdocs/quizz/vendor/doctrine/doctrine-bundle/Resources/views</argument>
+        <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/core-bundle/Resources/views</argument>
+        <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/core-bundle/Resources/views</argument>
         <argument>SonataCore</argument>
       </call>
       <call method="addPath">
-        <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/block-bundle/Resources/views</argument>
+        <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/block-bundle/Resources/views</argument>
         <argument>SonataBlock</argument>
       </call>
       <call method="addPath">
-        <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/doctrine-orm-admin-bundle/Resources/views</argument>
+        <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/doctrine-orm-admin-bundle/Resources/views</argument>
         <argument>SonataDoctrineORMAdmin</argument>
       </call>
       <call method="addPath">
-        <argument>/Users/janschaedlich/htdocs/quizz/vendor/sonata-project/admin-bundle/Resources/views</argument>
+        <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sonata-project/admin-bundle/Resources/views</argument>
         <argument>SonataAdmin</argument>
       </call>
       <call method="addPath">
-        <argument>/Users/janschaedlich/htdocs/quizz/src/Quizz/Bundle/CommonBundle/Resources/views</argument>
+        <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/src/Quizz/Bundle/CommonBundle/Resources/views</argument>
         <argument>QuizzCommon</argument>
       </call>
       <call method="addPath">
-        <argument>/Users/janschaedlich/htdocs/quizz/src/Quizz/Bundle/AdminBundle/Resources/views</argument>
+        <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/src/Quizz/Bundle/AdminBundle/Resources/views</argument>
         <argument>QuizzAdmin</argument>
       </call>
       <call method="addPath">
-        <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
+        <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
         <argument>Debug</argument>
       </call>
       <call method="addPath">
-        <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
+        <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>/Users/janschaedlich/htdocs/quizz/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/views</argument>
+        <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/views</argument>
         <argument>SensioDistribution</argument>
       </call>
       <call method="addPath">
-        <argument>/Users/janschaedlich/htdocs/quizz/app/Resources/views</argument>
+        <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/app/Resources/views</argument>
       </call>
       <call method="addPath">
-        <argument>/Users/janschaedlich/htdocs/quizz/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form</argument>
+        <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form</argument>
       </call>
       <call method="addPath">
-        <argument>/Users/janschaedlich/htdocs/quizz/vendor/knplabs/knp-menu/src/Knp/Menu/Resources/views</argument>
+        <argument>/Users/janschaedlich/htdocs/quizz/quizz-admin/vendor/knplabs/knp-menu/src/Knp/Menu/Resources/views</argument>
       </call>
     </service>
     <service id="logger" class="Symfony\Bridge\Monolog\Logger">
