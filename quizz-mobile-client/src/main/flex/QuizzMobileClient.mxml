@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark" 
+	xmlns:swiz="http://swiz.swizframework.org"
+	xmlns:config="config.*" 
+	xmlns:view="de.quizz.view.*"
+	applicationDPI="160"
+	resizeForSoftKeyboard="true"
+	creationComplete="creationCompleteHandler(event)" 
+	>
+	<!--
+	splashScreenImage="@Embed('assets/elviSplashScreenImage.png')"
+	splashScreenMinimumDisplayTime="1500"
+	splashScreenScaleMode="stretch"
+	-->
+	
+	<fx:Style source="style/style.css" />
+	
+	<fx:Script>
+		<![CDATA[
+			import de.quizz.action.event.StartupEvent;
+			import de.quizz.action.util.ApplicationManager;
+			import de.quizz.action.util.LocalHelper;
+			
+			import mx.events.FlexEvent;
+			
+			[Inject]
+			public var applicationManager:ApplicationManager;
+			
+			[Inject]
+			public var localhelper:LocalHelper;
+			
+			protected function creationCompleteHandler(event:FlexEvent):void
+			{
+				// monitor application
+				applicationManager.monitorApplication(stage);
+
+				// initialize localHelper
+				localhelper.initialize(Capabilities.language);
+				
+				// show current locale
+				//SkinnableAlert.show(LocalHelper.getCurrentLocale(), "Locale");
+				
+				dispatchEvent(
+					new StartupEvent(
+						StartupEvent.GET_STARTUP_DATA
+					)
+				);
+				
+				
+			}
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<config:SwizSetup />
+	</fx:Declarations>
+	
+	<view:AppView
+		id="view"
+		/>
+	
+</s:Application>

@@ -1,0 +1,160 @@
+<!--
+   Please note that this build file is an example of how to implement FlexMojos to execute all tests for a project following
+   Maven conventions.  This is just one possible way to utilize FlexMojos and Maven.  Please note, this build will fail
+   due to the sample test failures in this project.
+
+   Please note to use the unit testing support baked into FlexMojos in this example, the Flash Player executable must be
+   available on the PATH available to Maven.
+  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.momo.mobile</groupId>
+    <artifactId>momo-mobile-client</artifactId>
+    <version>1.0.0</version>
+    <packaging>swf</packaging>
+    <name>MOMOMobileClient</name>
+
+    <properties>
+    	<application.name>MOMOMobileClient</application.name>
+        <flex.compiler.version>4.6.b.23201</flex.compiler.version>
+        <flex.sdk.version>4.6.b.23201</flex.sdk.version>
+        <flexmojos.version>4.2-beta</flexmojos.version>
+        <!-- Point to standalone flashplayer -->
+        <keystore.file>${basedir}/cert.p12</keystore.file>
+   		<keystore.password>secret</keystore.password>
+    </properties>
+
+    <build>
+        <sourceDirectory>src/main/flex</sourceDirectory>
+        <testSourceDirectory>src/test/flex</testSourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.sonatype.flexmojos</groupId>
+                <artifactId>flexmojos-maven-plugin</artifactId>
+                <version>${flexmojos.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                	
+                    <headlessServer>true</headlessServer>
+                    <verboseStacktraces>true</verboseStacktraces>
+                    <flexBuilderCompatibility>true</flexBuilderCompatibility>
+
+                    <sourceFile>${application.name}.mxml</sourceFile>
+                    <descriptorTemplate>${basedir}/src/main/flex${application.name}-app.xml</descriptorTemplate>
+
+                    <keystore>${keystore.file}</keystore>
+                    <storepass>${keystore.password}</storepass>
+
+                    <!--optionally include files in the AIR package -->
+                    <includeFileSets>
+                        <fileSet>
+                            <directory>src/main/resources/embedded</directory>
+                            <includes>
+                                <include>*.*</include>
+                            </includes>
+                        </fileSet>
+                    </includeFileSets>
+                    <includeTestFiles>
+                        <includeTestFile>*Test.as</includeTestFile>
+                    </includeTestFiles>
+                    <executions>
+                    <execution>
+                        <goals>
+                            <goal>sign-air</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                </configuration>
+                <dependencies>
+                    <!-- Nice POM bundle available per SDK on Sonatype thanks to Flex-Mojos -->
+                    <dependency>
+                        <groupId>com.adobe.flex</groupId>
+                        <artifactId>compiler</artifactId>
+                        <version>${flex.compiler.version}</version>
+                        <type>pom</type>
+                    </dependency>
+                    <dependency>
+                        <groupId>com.adobe.flex.compiler</groupId>
+                        <artifactId>adt</artifactId>
+                        <version>${flex.compiler.version}</version>
+                        <scope>compile</scope>
+                    </dependency>
+                </dependencies>
+                
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <!-- Nice POM bundle available per SDK on Sonatype thanks to Flex-Mojos -->
+        <dependency>
+            <groupId>com.adobe.flex.framework</groupId>
+            <artifactId>flex-framework</artifactId>
+            <version>${flex.sdk.version}</version>
+            <type>pom</type>
+        </dependency>
+        <dependency> 
+            <groupId>com.adobe.flex.framework</groupId> 
+            <artifactId>air-framework</artifactId> 
+            <version>${flex.sdk.version}</version>
+            <type>pom</type> 
+        </dependency> 
+        <dependency> 
+            <groupId>com.adobe.flex.framework</groupId> 
+            <artifactId>mobilecomponents</artifactId> 
+            <version>${flex.sdk.version}</version> 
+            <type>swc</type> 
+        </dependency> 
+        <dependency> 
+            <groupId>com.adobe.flex.framework</groupId> 
+            <artifactId>mobile</artifactId> 
+            <version>${flex.sdk.version}</version> 
+            <type>swc</type> 
+            <classifier>theme</classifier>
+        </dependency> 
+        <!-- Based on testing library dependency specified, FlexMojos will know how to test your application -->
+        <dependency>
+            <groupId>com.adobe.flexunit</groupId>
+            <artifactId>flexunit</artifactId>
+            <version>4.0-rc-1</version>
+            <type>swc</type>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+		<groupId>org.graniteds</groupId>
+			<artifactId>granite-beanvalidation</artifactId>
+			<version>2.1.0.GA</version>
+		</dependency>
+    </dependencies>
+
+    <!-- Ideally this would go into your ~/.m2/settings.xml file -->
+    <repositories>
+        <repository>
+            <id>flex-mojos-repository</id>
+            <url>http://repository.sonatype.org/content/groups/flexgroup</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>flex-mojos-plugin-repository</id>
+            <url>http://repository.sonatype.org/content/groups/flexgroup</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+</project>
