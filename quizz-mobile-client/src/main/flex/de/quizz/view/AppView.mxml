@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group
+	xmlns:fx="http://ns.adobe.com/mxml/2009" 
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	width="100%" height="100%"
+	>
+
+	<fx:Script>
+		<![CDATA[
+			public var isTablet:Boolean;
+			
+			//[Bindable]
+			//[Inject(source="model.isUserLogged", bind="true")]
+			//public var isUserLogged:Boolean;
+			
+			//[Bindable]
+			//[Inject(source="model.currentTabState", bind="true")]
+			//public var currentTabState:int;
+		]]>
+	</fx:Script>
+	
+	<s:states>
+		<s:State name="portrait" />
+		<s:State name="landscape" />
+	</s:states>
+	
+	<s:Group
+		width="100%" height="100%"
+		includeIn="portrait"
+		>
+		
+		<s:layout>
+			<s:VerticalLayout 
+				horizontalAlign="center" verticalAlign="middle"
+				gap="10" 
+				/>
+		</s:layout>
+		
+		<s:ViewNavigator
+			id="vn_app"
+			width="100%" height="100%"
+			firstView="de.quizz.view.container.FirstView"
+			/>
+		<!--
+		<s:ButtonBar
+			width="100%"
+			bottom="0" left="0" right="0"
+			selectedIndex="{ currentTabState }"
+			visible="{ isUserLogged }"
+			includeInLayout="{ isUserLogged }"
+			>
+			<s:dataProvider>
+				<s:ArrayCollection>
+					<fx:Object data="standbytimes" label="Bereitschaften" />
+					<fx:Object data="profile" label="Mein Profil" />
+					<fx:Object data="settings" label="Einstellungen" />
+				</s:ArrayCollection>
+			</s:dataProvider>
+		</s:ButtonBar>	
+		-->
+	</s:Group>
+	
+	<s:Group
+		width="100%" height="100%"
+		includeIn="landscape"
+		>
+		
+		<s:Label
+			horizontalCenter="0" verticalCenter="0"
+			text="TODO: TABLET VIEW"
+			/>
+		
+	</s:Group>
+
+</s:Group>
