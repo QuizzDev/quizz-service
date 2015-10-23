@@ -41,6 +41,7 @@
 
     <!-- DATA -->
     <data:Model id="model" />
+	<data:QuizCreator id="quizCreator" />
     <fx:String id="urlNetworkManager">http://www.janschaedlich.de</fx:String>
 
     <!-- ACTION -->
