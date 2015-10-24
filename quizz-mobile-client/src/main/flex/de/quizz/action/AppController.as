@@ -69,8 +69,26 @@ package de.quizz.action
 			
 		}
 		
-		[EventHandler(event="QuizEvent.RESUME_PERSONAL_QUIZ")]
-		public function resumePersonalQuiz(event:QuizEvent):void
+		[EventHandler(event="QuizEvent.ADD_QUESTION_TO_FAVOURITELIST")]
+		public function addQuestionToFavouriteList(event:QuizEvent):void
+		{
+
+		}
+		
+		[EventHandler(event="QuizEvent.REMOVE_QUESTION_FROM_FAVOURITELIST")]
+		public function removeQuestionFromFavouriteList(event:QuizEvent):void
+		{
+			
+		}
+		
+		[EventHandler(event="QuizEvent.ADD_ANSWER_TO_FAVOURITELIST")]
+		public function addAnswerToFavouriteList(event:QuizEvent):void
+		{
+			
+		}
+		
+		[EventHandler(event="QuizEvent.REMOVE_ANSWER_FROM_FAVOURITELIST")]
+		public function removeAnswerFromFavouriteList(event:QuizEvent):void
 		{
 			
 		}
