@@ -1,4 +1,0 @@
-services:
-#    vimeda_common.example:
-#        class: Vimeda\Bundle\CommonBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
