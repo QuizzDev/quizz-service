@@ -1,2 +1,0 @@
-quizz-mobile-client
-==================
