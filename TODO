@@ -1,8 +1,0 @@
-++ Topics einander zuordnen
-* Answer und Topiv einander zuordnen
-* Answer property associatedQuestion füllen
-* Drug und Target einnander zuordnen
-* Drug und Indication einander zuordnen
-* Drug und ContraIndication einander zuordnen
-* Drug und AdvereEffect einander zuordnen
-* IDs aus Question String extrahieren (What is the primary target structure of Abciximab_10062) 
