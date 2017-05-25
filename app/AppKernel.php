@@ -30,9 +30,7 @@ class AppKernel extends Kernel
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
-            
-            new AppBundle\AppBundle(),
-            new Quizz\Bundle\CommonBundle\QuizzCommonBundle(),
+
             new Quizz\Bundle\AdminBundle\QuizzAdminBundle(),
         );
 

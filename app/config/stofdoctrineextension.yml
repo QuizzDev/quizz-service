@@ -6,5 +6,5 @@ stof_doctrine_extensions:
             sluggable: true
             reference_integrity: true
             softdeleteable: true
-    class:
-        sluggable: Quizz\Bundle\CommonBundle\Listener\SluggableListener
+    #class:
+        #sluggable: Quizz\Bundle\CommonBundle\Listener\SluggableListener

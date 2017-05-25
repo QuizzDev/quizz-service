@@ -1,3 +1,0 @@
-vimeda_common_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: VimedaCommonBundle:Default:index }
